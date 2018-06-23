@@ -1,0 +1,74 @@
+body {
+background-image: url("https://www.graphicpear.com/wp-content/uploads/2017/05/aaa.jpg");
+  font-size: 20px;
+  font-family:  'Montserrat', serif;
+}
+
+.wrapper{
+  padding: 90px;
+}
+#app{
+  border: 1px;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  background-color: #f3edff;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+button{
+  background-color: darkslategrey;
+  border-color: darkslategrey;
+  padding: 10px;
+    border-radius: 5px;
+      width: 150px;
+  margin: 15px;
+  color:white;
+}
+.buts{
+  margin: auto;
+}
+.elements{
+  width: 100%;
+}
+hr{
+  width: 100%;
+  margin: 30px;
+}
+img{
+  border-radius: 50%;
+  height: 230px;
+
+}
+h1{
+  display: inline;
+}
+h2{
+  display: block;
+}
+
+.top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addInfo{
+  width: 60%;
+}
+
+.addInfo{
+    width: 70%;
+}
+
+li{
+    list-style-type: none;
+}
