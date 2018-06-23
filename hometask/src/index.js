@@ -9,8 +9,8 @@ const ukrSkills= ['"чистий" Javascript, jQuery', 'HTML5, CSS3', 'Знан�
 
 const content = {
     en: {
-        btnUkrLabel: "ukrainian",
-        btnEnLabel: "english",
+        ukrBut: "ukrainian",
+        engBut: "english",
         Cv: "Resume",
         title: "Yulia Romanyk",
         aboutmetitle: "About me",
@@ -23,8 +23,8 @@ const content = {
 
     },
     ukr: {
-        btnUkrLabel: "українська",
-        btnEnLabel: "англійська",
+        ukrBut: "українська",
+        engBut: "англійська",
         Cv : "Резюме",
         title: "Юля Романик",
         aboutmetitle: "Про мене",
@@ -57,12 +57,11 @@ const AboutMe = () => {
 
         <LanguageCont.Consumer>
             {content => {
-                return  <div className ="addInfo">{content.infos}</div>;
-
+                return  <div className = "addInfo">{content.infos}</div>;
             }}
         </LanguageCont.Consumer>
     );
-    };
+};
 
 const AboutMeTitle = () => {
     return (
@@ -129,7 +128,7 @@ const Lol = () => {
     return (
     <LanguageCont.Consumer>
             {content => {
-                return <ul className= "addInfo"> {content.skills.map((item) =>  <li>{item}</li>)}
+                return <ul className= "addInfo"> {content.skills.map((item) => <li>{item}</li>)}
                 </ul>
             }}
         </LanguageCont.Consumer>
@@ -139,7 +138,7 @@ const Lol = () => {
 
 
 
-class Language extends React.Component{
+class Language extends React.Component {
     render(){
         return (
             <section className = "bot">
@@ -154,7 +153,7 @@ class Language extends React.Component{
     }
 }
 
-class Header extends React.Component{
+class Header extends React.Component {
     render(){
         return (
             <div className = "top">
@@ -182,7 +181,7 @@ class Contact extends React.Component {
     }
 }
 
-class About extends React.Component{
+class About extends React.Component {
     render(){
         return (
             <section className = "bot">
@@ -193,7 +192,7 @@ class About extends React.Component{
     }
 }
 
-class Skill extends React.Component{
+class Skill extends React.Component {
     render(){
         return (
             <section className = "bot">
@@ -224,21 +223,25 @@ class App extends React.Component {
                                 <div >
                                     <div className = "buts">
                                         <button onClick={() => this.setState({ language: "en" })}>
-                                            {content.btnEnLabel}
+                                            {content.engBut}
                                         </button>
                                         <button onClick={() => this.setState({ language: "ukr" })}>
-                                            {content.btnUkrLabel}
+                                            {content.ukrBut}
                                         </button>
                                     </div>
                                     <Cv />
                                    <Header/>
                                     <hr/>
+
                                     <Contact/>
                                     <hr />
+
                                     <About />
                                     <hr />
+
                                     <Skill />
                                     <hr />
+
                                     <Language/>
 
                                 </div>
